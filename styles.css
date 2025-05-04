@@ -105,6 +105,22 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
+}
+.contact-info__item span {
+  position: relative;
+}
+.contact-info__item span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--secondary-text-color);  
+  transition: all 0.3s;
+}
+.contact-info__item span:hover:before {
+  width: 100%;
 }
 
 .contact-info__item:not(:last-child) {
