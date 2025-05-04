@@ -50,25 +50,6 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-  .main-info,
-  .contact_info_container {
-    flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .experiences {
-    margin-right: 0;
-  }
-}
-
 /* General styles end */
 
 /* Contact info styles start */
@@ -188,6 +169,10 @@ body {
   margin-bottom: 15px;
 }
 
+.skills__container {
+  display: flex;
+  gap: 50px;
+}
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
@@ -292,3 +277,27 @@ body {
 }
 
 /* Experience and additional info styles end */
+
+@media screen and (max-width: 576px) {
+  .main-info,
+  .contact_info_container {
+    flex-direction: column;
+  }
+
+  .contact_info_container {
+    align-items: center;
+  }
+
+  .contact-info__block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .skills__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experiences {
+    margin-right: 0;
+  }
+}
