@@ -50,25 +50,6 @@ body {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-  .main-info,
-  .contact_info_container {
-    flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .experiences {
-    margin-right: 0;
-  }
-}
-
 /* General styles end */
 
 /* Contact info styles start */
@@ -105,6 +86,22 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
+}
+.contact-info__item span {
+  position: relative;
+}
+.contact-info__item span::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--secondary-text-color);  
+  transition: all 0.3s;
+}
+.contact-info__item span:hover:before {
+  width: 100%;
 }
 
 .contact-info__item:not(:last-child) {
@@ -172,6 +169,10 @@ body {
   margin-bottom: 15px;
 }
 
+.skills__container {
+  display: flex;
+  gap: 50px;
+}
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
@@ -276,3 +277,27 @@ body {
 }
 
 /* Experience and additional info styles end */
+
+@media screen and (max-width: 576px) {
+  .main-info,
+  .contact_info_container {
+    flex-direction: column;
+  }
+
+  .contact_info_container {
+    align-items: center;
+  }
+
+  .contact-info__block:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .skills__container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experiences {
+    margin-right: 0;
+  }
+}
